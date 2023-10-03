@@ -138,6 +138,42 @@ ggplot(weather_df, aes(x = tmax, y = name)) +
 
 ```
 
+```{r}
+weather_df %>% 
+  filter(name == "Molokai_HI") %>% 
+  ggplot(aes(x = date, y = tmax)) +
+  geom_line(alpha = .5) +
+  geom_point(size = .5)
+```
+
+
+
+
+## saving and embedding plots
+```{r}
+ggp_weather = 
+weather_df %>% 
+  ggplot(aes(x = tmin, y = tmax)) +
+  geom_point()
+
+ggp_weather
+
+ggsave("results/ggp_weather.pdf", ggp_weather)
+  
+```
+
+```{r fig.width = 6, fig.asp = .6}
+ggp_weather
+
+```
+
+```{r}
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+```
 
 
 

@@ -1,0 +1,17 @@
+---
+title: "Viz_and_EDA2"
+output: github_document
+date: "2023-10-03"
+---
+```{r}
+library(tidyverse)
+library(patchwork)
+
+```
+
+
+```{r}
+
+```
+
+
